@@ -1,4 +1,8 @@
 # Portfolio Alex Stiles
+📎 **Live Project**: [alexstiles-ykos.netlify.app](https://alexstiles-ykos.netlify.app)
+
+---
+
 ## 🌟 Key Advantages
 
 ### ✅ UX-Friendly
@@ -106,4 +110,6 @@
 ⚡ Fast and optimized  
 ♿ Accessible (ARIA roles, keyboard navigation)  
 🚀 Ready for deployment!
+
+📎 **Live Project**: [alexstiles-ykos.netlify.app](https://alexstiles-ykos.netlify.app)
 
