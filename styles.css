@@ -804,7 +804,8 @@
         /* Footer */
         footer {
             background: linear-gradient(135deg, var(--text-dark), #111827);
-            color: var(--white);
+            
+            color: darkorange;
             padding: 3rem 2rem;
             text-align: center;
         }
