@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alex Styles - Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <header id="header">
+        <nav>
+            <div class="logo" onclick="scrollToTop()">Alex Styles</div>
+            <div class="menu-toggle" id="menuToggle" onclick="toggleMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <div class="nav-center" id="navCenter">
+                <ul class="nav-links" id="navLinks">
+                    <li><a href="#home" class="tooltip" data-tooltip="Go to home">Home</a></li>
+                    <li><a href="#about" class="tooltip" data-tooltip="Learn more">About</a></li>
+                    <li><a href="#portfolio" class="tooltip" data-tooltip="My projects">Portfolio</a></li>
+                    <li><a href="#contact" class="tooltip" data-tooltip="Get in touch">Contact</a></li>
+                </ul>
+                <div class="lang-switcher">
+                    <div class="lang-slider" id="langSlider"></div>
+                    <button class="lang-btn active" onclick="switchLanguage('en')">EN</button>
+                    <button class="lang-btn" onclick="switchLanguage('uk')">UK</button>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero section -->
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <h1 data-en="Hi, I'm Alex Styles" data-uk="Привіт, я Алекс Стайлз">Hi, I'm Alex Styles</h1>
+            <p data-en="Web developer and designer creating modern and functional websites" data-uk="Веб-розробник і дизайнер, який створює сучасні та функціональні веб-сайти">Web developer and designer creating modern and functional websites</p>
+            <a href="#portfolio" class="btn"><span data-en="View My Work" data-uk="Переглянути роботи">View My Work</span></a>
+        </div>
+    </section>
+
+    <!-- About section -->
+    <section class="about" id="about">
+        <h2 data-en="About Me" data-uk="Про мене">About Me</h2>
+        <div class="about-content">
+            <div class="about-text">
+                <p data-en="I'm a passionate web developer with over 5 years of experience creating intuitive and visually appealing websites. My expertise spans frontend and backend development, with a focus on responsive design and user experience." data-uk="Я пристрасний веб-розробник з понад 5-річним досвідом створення інтуїтивних та візуально привабливих веб-сайтів. Моя експертиза охоплює frontend та backend розробку, з фокусом на адаптивний дизайн та користувацький досвід.">I'm a passionate web developer with over 5 years of experience creating intuitive and visually appealing websites. My expertise spans frontend and backend development, with a focus on responsive design and user experience.</p>
+                <p data-en="I specialize in building solutions that not only look great but also deliver excellent functionality and performance across all devices." data-uk="Я спеціалізуюся на створенні рішень, які не лише виглядають чудово, але й забезпечують відмінну функціональність та продуктивність на всіх пристроях.">I specialize in building solutions that not only look great but also deliver excellent functionality and performance across all devices.</p>
+                <p data-en="When I'm not coding, you can find me exploring new technologies, reading about design trends, or working on personal projects." data-uk="Коли я не кодую, ви можете знайти мене за вивченням нових технологій, читанням про дизайнерські тренди або роботою над особистими проєктами.">When I'm not coding, you can find me exploring new technologies, reading about design trends, or working on personal projects.</p>
+                <div class="skills">
+                    <div class="skill-badge">HTML/CSS</div>
+                    <div class="skill-badge">JavaScript</div>
+                    <div class="skill-badge">React</div>
+                    <div class="skill-badge">Node.js</div>
+                    <div class="skill-badge">UI/UX</div>
+                    <div class="skill-badge">Figma</div>
+                </div>
+            </div>
+            <div class="about-image">
+                👨‍💻
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio section -->
+    <section class="portfolio" id="portfolio">
+        <h2 data-en="My Portfolio" data-uk="Моє портфоліо">My Portfolio</h2>
+        <div class="portfolio-grid">
+            <div class="portfolio-item" onclick="openModal('ecommerce')">
+                <div class="portfolio-image" data-view-text="👁️ View Details">🛍️</div>
+                <div class="portfolio-info">
+                    <h3 data-en="E-Commerce Platform" data-uk="E-Commerce платформа">E-Commerce Platform</h3>
+                    <p data-en="Full-featured online store with cart, payment, and product management system." data-uk="Повнофункціональний інтернет-магазин з кошиком, оплатою та системою управління продуктами.">Full-featured online store with cart, payment, and product management system.</p>
+                    <div class="portfolio-tags">
+                        <span class="tag">React</span>
+                        <span class="tag">Node.js</span>
+                        <span class="tag">MongoDB</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="portfolio-item" onclick="openModal('mobile')">
+                <div class="portfolio-image" data-view-text="👁️ View Details">📱</div>
+                <div class="portfolio-info">
+                    <h3 data-en="Mobile App" data-uk="Мобільний додаток">Mobile App</h3>
+                    <p data-en="Cross-platform task management app with real-time synchronization." data-uk="Кросплатформний мобільний додаток для управління задачами з синхронізацією в реальному часі.">Cross-platform task management app with real-time synchronization.</p>
+                    <div class="portfolio-tags">
+                        <span class="tag">React Native</span>
+                        <span class="tag">Firebase</span>
+                        <span class="tag">Redux</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="portfolio-item" onclick="openModal('corporate')">
+                <div class="portfolio-image" data-view-text="👁️ View Details">🏢</div>
+                <div class="portfolio-info">
+                    <h3 data-en="Corporate Website" data-uk="Корпоративний сайт">Corporate Website</h3>
+                    <p data-en="Modern corporate website with CMS and multi-language support." data-uk="Сучасний корпоративний веб-сайт з CMS та багатомовною підтримкою.">Modern corporate website with CMS and multi-language support.</p>
+                    <div class="portfolio-tags">
+                        <span class="tag">WordPress</span>
+                        <span class="tag">PHP</span>
+                        <span class="tag">MySQL</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="portfolio-item" onclick="openModal('dashboard')">
+                <div class="portfolio-image" data-view-text="👁️ View Details">📊</div>
+                <div class="portfolio-info">
+                    <h3 data-en="Analytics Dashboard" data-uk="Dashboard аналітики">Analytics Dashboard</h3>
+                    <p data-en="Interactive dashboard with data visualization and real-time reports." data-uk="Інтерактивна панель з візуалізацією даних та звітами в реальному часі.">Interactive dashboard with data visualization and real-time reports.</p>
+                    <div class="portfolio-tags">
+                        <span class="tag">Vue.js</span>
+                        <span class="tag">D3.js</span>
+                        <span class="tag">API</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="portfolio-item" onclick="openModal('design')">
+                <div class="portfolio-image" data-view-text="👁️ View Details">🎨</div>
+                <div class="portfolio-info">
+                    <h3 data-en="Design System" data-uk="Дизайн-система">Design System</h3>
+                    <p data-en="Comprehensive component library ensuring design consistency." data-uk="Комплексна бібліотека компонентів для забезпечення консистентності дизайну.">Comprehensive component library ensuring design consistency.</p>
+                    <div class="portfolio-tags">
+                        <span class="tag">Figma</span>
+                        <span class="tag">Storybook</span>
+                        <span class="tag">CSS</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="portfolio-item" onclick="openModal('game')">
+                <div class="portfolio-image" data-view-text="👁️ View Details">🎮</div>
+                <div class="portfolio-info">
+                    <h3 data-en="Interactive Game" data-uk="Інтерактивна гра">Interactive Game</h3>
+                    <p data-en="Browser-based game with 3D graphics and multiplayer." data-uk="Браузерна гра з 3D графікою та мультиплеєром.">Browser-based game with 3D graphics and multiplayer.</p>
+                    <div class="portfolio-tags">
+                        <span class="tag">Three.js</span>
+                        <span class="tag">WebGL</span>
+                        <span class="tag">Socket.io</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Modal -->
+    <div class="modal" id="modal">
+        <div class="modal-content">
+            <span class="modal-close" onclick="closeModal()">×</span>
+            <div class="modal-header">
+                <h2 id="modalTitle"></h2>
+            </div>
+            <div class="modal-body">
+                <p id="modalDescription"></p>
+                <ul class="modal-features" id="modalFeatures"></ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- Contact section -->
+    <section class="contact" id="contact">
+        <h2 data-en="Get In Touch" data-uk="Зв'яжіться зі мною">Get In Touch</h2>
+        <form class="contact-form" id="contactForm" onsubmit="handleSubmit(event)">
+            <div class="form-group">
+                <label for="name" data-en="Name" data-uk="Ім'я">Name</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="message" data-en="Message" data-uk="Повідомлення">Message</label>
+                <textarea id="message" name="message" required></textarea>
+            </div>
+            <button type="submit" class="submit-btn" data-en="Send Message" data-uk="Надіслати повідомлення">Send Message</button>
+        </form>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="social-links">
+            <a href="#" title="GitHub">💻</a>
+            <a href="#" title="LinkedIn">💼</a>
+            <a href="#" title="Twitter">🐦</a>
+            <a href="#" title="Email">✉️</a>
+        </div>
+        <p data-en="© 2024 Alex Styles. All rights reserved." data-uk="© 2024 Алекс Стайлз. Всі права захищені.">&copy; 2024 Alex Styles. All rights reserved.</p>
+    </footer>
+
+    <!-- Success message -->
+    <div class="success-message" id="successMessage" data-en="✓ Message sent successfully!" data-uk="✓ Повідомлення успішно надіслано!">
+        ✓ Message sent successfully!
+    </div>
+
+    <!-- Scroll to top button -->
+    <button class="scroll-top" id="scrollTop" onclick="scrollToTop()">↑</button>
+
+    <script src="js.js"></script>
+</body>
+</html>
