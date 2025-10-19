@@ -802,10 +802,15 @@
         }
 
         /* Footer */
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
         footer {
             background: linear-gradient(135deg, var(--text-dark), #111827);
             
-            color: darkorange;
+            color: var(--white);
             padding: 3rem 2rem;
             text-align: center;
         }
